@@ -36,6 +36,7 @@ const prettyJson = (content) => {
 packages.forEach(({
   name: comname,
   _dirname,
+  isMonoMain = false,
 }) => {
   const comPkgname = `${comname}` || _dirname
   const comDirname = _dirname || comPkgname
@@ -65,7 +66,13 @@ packages.forEach(({
     const source = fs.readTextFile(spath)
 
     let output = ejs.render(source, {
-      pkg: {
+      pkg: isMonoMain ? {
+        name: comPkgname,
+        npm_name: comPkgname,
+        git_group: monoInfo.monoscope,
+        git_path: monoInfo.gitPath,
+        mono_path: ``,
+      } : {
         name: comPkgname,
         npm_name: `${scopePrefix}/${comPkgname}`,
         git_group: monoInfo.monoscope,

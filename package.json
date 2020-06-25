@@ -1,8 +1,8 @@
 {
-  "name": "fibjs-mono-starter",
+  "name": "follup-mono",
   "mono": {
-    "scope": "fibjs-mono-group",
-    "git_path": "fibjs-mono-group/path"
+    "scope": "follup",
+    "git_path": "richardo2016/follup"
   },
   "private": true,
   "scripts": {

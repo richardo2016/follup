@@ -1,12 +1,13 @@
 module.exports = [
     {
-        name: 'common',
-        pkgname: 'common',
+        name: 'follup',
+        pkgname: 'follup',
+        isMonoMain: true
     },
     /* internal module :start */
     {
-        name: 'imodule-foo',
-        pkgname: 'imodule-foo',
+        name: 'plugin-fibjs-resolve',
+        pkgname: 'plugin-fibjs-resolve',
     },
     /* internal module :end */
 ]
